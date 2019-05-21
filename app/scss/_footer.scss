@@ -1,0 +1,42 @@
+/* 
+		_footer.scss
+*/
+
+/*
+										---FOOTER---
+*/
+
+
+
+#footer{
+	position: relative;
+	//color: rgba(black, 0.4);
+	//min-height: 150px;
+	line-height: 170%;
+	font-weight: 500;
+	background-color: $color-gray-1;
+}
+
+.footer-content{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: $color-gray-4;
+	font-weight: normal;
+}
+
+.footer-menu{
+	font-size: em(12);
+	li{
+		margin-right: 10px;
+	}
+}
+
+.copy-content{
+	font-size: 0.85em;
+}
+.copyright{
+	
+}
+.dev{
+}
+

@@ -1,0 +1,244 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7c628l');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?7c628l#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?7c628l') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?7c628l') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?7c628l##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icm-"], [class*=" icm-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icm-air-freight {
+  &:before {
+    content: $icm-air-freight; 
+  }
+}
+.icm-armchair {
+  &:before {
+    content: $icm-armchair; 
+  }
+}
+.icm-auction {
+  &:before {
+    content: $icm-auction; 
+  }
+}
+.icm-box {
+  &:before {
+    content: $icm-box; 
+  }
+}
+.icm-building {
+  &:before {
+    content: $icm-building; 
+  }
+}
+.icm-bulb {
+  &:before {
+    content: $icm-bulb; 
+  }
+}
+.icm-champagne-glass {
+  &:before {
+    content: $icm-champagne-glass; 
+  }
+}
+.icm-contract {
+  &:before {
+    content: $icm-contract; 
+  }
+}
+.icm-cow {
+  &:before {
+    content: $icm-cow; 
+  }
+}
+.icm-desktop {
+  &:before {
+    content: $icm-desktop; 
+  }
+}
+.icm-envelope-shape {
+  &:before {
+    content: $icm-envelope-shape; 
+  }
+}
+.icm-fabric {
+  &:before {
+    content: $icm-fabric; 
+  }
+}
+.icm-fast-food {
+  &:before {
+    content: $icm-fast-food; 
+  }
+}
+.icm-headset {
+  &:before {
+    content: $icm-headset; 
+  }
+}
+.icm-house {
+  &:before {
+    content: $icm-house; 
+  }
+}
+.icm-laboratory {
+  &:before {
+    content: $icm-laboratory; 
+  }
+}
+.icm-lock {
+  &:before {
+    content: $icm-lock; 
+  }
+}
+.icm-map {
+  &:before {
+    content: $icm-map; 
+  }
+}
+.icm-masks {
+  &:before {
+    content: $icm-masks; 
+  }
+}
+.icm-medical-book-health {
+  &:before {
+    content: $icm-medical-book-health; 
+  }
+}
+.icm-megaphone {
+  &:before {
+    content: $icm-megaphone; 
+  }
+}
+.icm-microscope {
+  &:before {
+    content: $icm-microscope; 
+  }
+}
+.icm-newspaper {
+  &:before {
+    content: $icm-newspaper; 
+  }
+}
+.icm-pick {
+  &:before {
+    content: $icm-pick; 
+  }
+}
+.icm-receipt {
+  &:before {
+    content: $icm-receipt; 
+  }
+}
+.icm-shield {
+  &:before {
+    content: $icm-shield; 
+  }
+}
+.icm-shopping-cart {
+  &:before {
+    content: $icm-shopping-cart; 
+  }
+}
+.icm-sketch {
+  &:before {
+    content: $icm-sketch; 
+  }
+}
+.icm-software {
+  &:before {
+    content: $icm-software; 
+  }
+}
+.icm-solar-energy {
+  &:before {
+    content: $icm-solar-energy; 
+  }
+}
+.icm-star {
+  &:before {
+    content: $icm-star; 
+  }
+}
+.icm-star-o {
+  &:before {
+    content: $icm-star-o; 
+  }
+}
+.icm-steering-wheel-car-part-controller {
+  &:before {
+    content: $icm-steering-wheel-car-part-controller; 
+  }
+}
+.icm-support {
+  &:before {
+    content: $icm-support; 
+  }
+}
+.icm-telephone {
+  &:before {
+    content: $icm-telephone; 
+  }
+}
+.icm-tower {
+  &:before {
+    content: $icm-tower; 
+  }
+}
+.icm-train {
+  &:before {
+    content: $icm-train; 
+  }
+}
+.icm-university {
+  &:before {
+    content: $icm-university; 
+  }
+}
+.icm-user {
+  &:before {
+    content: $icm-user; 
+  }
+}
+.icm-valve {
+  &:before {
+    content: $icm-valve; 
+  }
+}
+.icm-washing-machine {
+  &:before {
+    content: $icm-washing-machine; 
+  }
+}
+.icm-water {
+  &:before {
+    content: $icm-water; 
+  }
+}
+.icm-wrench {
+  &:before {
+    content: $icm-wrench; 
+  }
+}
+
