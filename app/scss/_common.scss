@@ -4,15 +4,15 @@
 		--Variables--
 */
 
-$color-1: #ff1414 !default;
-$color-2: lighten($color-1, 5%) !default;
+$color-1: #ef1937 !default;
+$color-2: #f11462 !default;
 $color-3: #4584ee !default;
 $color-4: #f15045 !default;
 $color-5: #65a328 !default;
 $color-special-1: #2e1c11;
 
-$font-family-1: "Fira Sans";
-$font-family-2: "Oswald";
+$font-family-1: "Gotham Pro";
+$font-family-2: "Uni Sans";
 $font-family-3: "sans-serif";
 
 $color-scroll: $color-1;
@@ -36,10 +36,9 @@ $fs-def: 14;
 	padding-left: 0;
 	padding-right: 0;
 }
-
+$gradient-1: linear-gradient(to left, $color-1, $color-2);
 .gradient-1{ 
-	background-color: #1a1a1a !important; 
-	background: linear-gradient(to top left, lighten(#393939, 10%), #1a1a1a); 
+	background: $gradient-1; 
 }
 
 
@@ -900,10 +899,11 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	font-size: em(26);
+	font-size: em(36);
 	margin-bottom: 15px;
 	font-weight: 600;
 	line-height: 120%;
+	font-family: $font-family-2;
 	@media (max-width: 991px) {
 		font-size: em(26);
 	}

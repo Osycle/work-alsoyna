@@ -157,14 +157,14 @@
 				imagesLoaded: true,
 				autoPlay: 6000,
 				pauseAutoPlayOnHover: true,
-				arrowShape: "M 10,50 L 70,100 L 70,90 L 70,50  L 70,10 L 70,0 Z",
+				arrowShape: "M 30,50 L 55,75 L 60,70 L 40,50  L 60,30 L 55,25 Z",
 				initialIndex: 0,
 				friction: 1,
 				selectedAttraction: 1,
 				prevNextButtons: true,
 				draggable: false,
 				wrapAround: true,
-				pageDots: false,
+				pageDots: true,
 				contain: false,
 				percentPosition: true,
 				cellSelector: 'figure',
@@ -173,7 +173,6 @@
 			bnrCarousel.data("flickity");
 
 			$(".bnr-carousel .carousel-items").append("<div class='container-arrows'></div>").find(".container-arrows").append($(".bnr-carousel .carousel-items .flickity-prev-next-button"))
-			$(bnrCarousel).find(".flickity-prev-next-button.previous").after($(bnrCarousel).find(".flickity-page-dots"));
 
 		}
 

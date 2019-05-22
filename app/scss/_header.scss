@@ -3,8 +3,8 @@
 										 ---HEADER---
 */
 
-$header-top-height: 40px; 
-$header-bottom-height: 80px;
+$header-top-height: 130px; 
+$header-bottom-height: 0px;
 $header-min-menu: 70px;
 
 #header{
@@ -34,6 +34,7 @@ $header-min-menu: 70px;
 	//position: relative;
 	height: $header-top-height+$header-bottom-height;
 	transition: height 0.3s ease-in-out 0.4s;
+	display: none;
 	@media ( max-width: 991px ){
 		height: 70px;
 	}
@@ -49,15 +50,13 @@ $header-min-menu: 70px;
 
 .header-top{
 	width: 100%;
-	transform: auto;
-	background-color: $color-gray-5;
-	color: $color-gray-3;
+	color: white;
 }
 .header-top-content{
 	height: $header-top-height;
 	//overflow: hidden;
 	display: flex;
-	font-size: em(12);
+	font-size: em(13);
 	align-items: center;
 	justify-content: space-between;
 	white-space: nowrap;
@@ -65,65 +64,12 @@ $header-min-menu: 70px;
 		flex-wrap: nowrap;
 	}
 }
-.header-address{
-	min-width: 30%;
-	overflow: hidden;
-	max-width: 200px;
-	text-overflow: ellipsis;
-}
-.header-signin{
-	height: 100%;
-	display: flex;
-	text-transform: uppercase;
-	.btn-def{
-		align-items: center;
-		display: flex;
-		height: 100%;
-		&:not(.reverse):nth-child(1){
-			color: $color-gray-3;
-			background-color: transparent;
-		}
-	}
-}
 
-.header-bottom{
-	background-color: white;
-	box-shadow: 0 5px 25px -15px rgba(0, 0, 0, 0.32);
-}
-.header-bottom-content{
-	display: flex;
-	background-color: white;
-	align-items: center;
-	z-index: 1;
-	position: relative;
-	height: $header-bottom-height;
-}
+
+
 .header-logo{
 	img{
-		width: 220px;
-	}
-}
-.search-container{
-	width: 100%;
-	.search-nav-content{
-		min-width: 480px;
-		input{
-			width: 100%;
-		}
-	}
-	.search-container-wrapper{
-		display: flex;
-		justify-content: flex-end;
-	}
-	.select-content{
-		select{
-			min-width: 200px;
-		}
-	}
-	@media (min-width: 992px) {
-		.btn-def{
-			margin-left: 10px;
-		}
+		width: 293px;
 	}
 }
 
@@ -132,7 +78,7 @@ $header-min-menu: 70px;
 		transform-origin: 50% 0;
 	}
 
-	.header-top, .header-top-content, .header-logo img, .header-logo, .header-bottom-content{
+	.header-top, .header-top-content, .header-logo img, .header-logo{
 		transition: all 0.5s ease; 	
 	}
 	&.scrolled, &.header-pages{
@@ -152,47 +98,10 @@ $header-min-menu: 70px;
 				width: 180px;
 			}
 		}
-		.header-bottom-content{
-			height: 60px;
-		}
 	}
 }
 
 
-.header-lang{
-	box-shadow: 0 0 30px -3px rgba(black, 0.5);
-	padding: 8px 10px;
-	background-color: rgba(white, 0.05);
-	position: relative;
-	img{	
-		border: 1px solid rgba(black, 0.1);
-	}
-	.hide-list{
-		color: white;
-		position: absolute;
-		opacity: 0;
-		background-color: #333;
-		padding: 5px 10px;
-		left: 0px;
-		margin-top: 10px;
-		width: 100%;
-		li{
-			margin: 5px 0;
-		}
-
-		img{
-			box-shadow: 0 0 10px -1px rgba(black, 0.5);
-		}
-	}
-	#langlist{
-		&:checked{
-			&~.hide-list{
-				z-index: 10;
-				opacity: 1;
-			}
-		}
-	}
-}
 
 .socicons{
 	font-size: 14px;
@@ -221,8 +130,9 @@ $header-min-menu: 70px;
 .menu{
 	position: relative;
 	height: 100%;
-	font-weight: 300;
-	overflow: hidden;
+	font-weight: bold;
+	width: 70%;
+	text-transform: uppercase;
 	nav{
 		white-space: nowrap;
 		height: 100%;
@@ -249,14 +159,14 @@ $header-min-menu: 70px;
     		align-items: center;
 			}
 			&.active{
-				color: white;
+				color: $color-1;
 			}
 			&:hover{
 				a{
-					color: white;	
+					color: $color-1;	
 				}
 				.sub-menu-1{
-					transform: matrix(1,0,0,1,0,0);
+					transform: matrix(1,0,0,1,0,-30);
 					opacity: 1;
 					//visibility: visible;
 					&, li, a{
@@ -286,29 +196,30 @@ $header-min-menu: 70px;
 
 ul[class*="sub-menu"]{
 	position: absolute;
-	font-weight: 500;
-	transition: 
-							opacity 0.3s ease-in-out,
+	font-weight: 300;
+	transition:	opacity 0.3s ease-in-out,
 							transform 0.3s ease-in-out,
 							pointer-events 0s ease-in-out 0.3s;
 	opacity: 0;
 	z-index: 2;
-	background-color: white;
+	box-shadow: 0px 2px 10px -5px rgba(black, 0.5);
 	&, li, a{
 		pointer-events: none !important;
 	}
-	box-shadow: 0px 2px 10px -5px rgba(black, 0.5);
 	li{
 		white-space: nowrap;
 		width: max-content;
 		min-width: 175px;
 		width: 100%;
 		padding: 0 15px;
+		transition: all 0.3s ease;
+		background: linear-gradient(to left, rgba(white, 0.1), rgba(white, 0.1));
 		&:not(:last-child){
 			border-bottom: 1px solid rgba(black, 0.1);
 		}
 		&:hover{
 			color: white;
+			background: linear-gradient(to left, $color-1, $color-2);
 			.sub-menu-2{
 				opacity: 1;
 				transform: none;transform: unset; 
@@ -317,10 +228,10 @@ ul[class*="sub-menu"]{
 		a{
 			position: relative;
 			z-index: 1;
-			color: $color-gray-5 !important;
+			color: white !important;
 			display: block;
 			transition: all 0.3s ease-in-out;
-			padding: 12px 0;
+			padding: 8px 0;
 			&:before, &:after{
 				display: none;
 			}
@@ -394,45 +305,7 @@ ul[class*="sub-menu"]{
 		display: none;
 		width: 40%;
 	}
-	.header-signin{
-		text-align: center;
-		padding-left: 15px;
-		padding-right: 15px;
-		justify-content: space-between;
-		.btn-def{
-			background-color: transparent;
-			color: $color-gray-3;
-			text-decoration: underline;
-			width: 100%;
-			a{
-				width: 100%;
-			}
-		}
-		&.username-content{
-			justify-content: center;
-			align-items: center;
-		}
-	}
-}
-.username-content{
-	justify-content: center;
-	align-items: center;
-	.img{
-		height: 30px;
-		width: 30px;
-		border-radius: 50%;
-		background-position: center;
-		background-size: cover;
-		border: 1px solid $color-gray-3;
-	}
-	.username-title{
-		margin-left: 15px;
-		max-width: 210px;
-		p{
-			text-overflow: ellipsis;
-			overflow: hidden;
-		}
-	}
+
 }
 #mm-blocker{
 	background-color: rgba(black, 0.3);
