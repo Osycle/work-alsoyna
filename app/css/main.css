@@ -8732,55 +8732,31 @@ textarea.form-control {
     padding-left: 45px; }
 
 .form-def {
-  background-color: white;
-  -webkit-background-size: cover;
-  background-size: cover;
-  color: black;
-  padding: 10px 40px; }
-  @media (min-width: 992px) {
-    .form-def {
-      background-image: url("../img/other/callbaby.png");
-      background-repeat: no-repeat;
-      background-position: -50px;
-      -webkit-background-size: auto auto;
-      background-size: auto;
-      padding-left: 160px;
-      padding-right: 20px; } }
-  .form-def .form-main {
-    max-width: 320px; }
-  .form-def h1, .form-def h3 {
-    margin-top: 0;
-    margin-bottom: 0; }
+  background-color: #131b2e;
+  color: white;
+  overflow: visible;
+  max-width: 370px; }
+  .form-def h2 {
+    font-size: 1.28571em;
+    text-transform: uppercase; }
   .form-def .fancybox-close-small {
-    top: 15px;
-    right: 15px; }
+    background: -webkit-gradient(linear, right top, left top, from(#ef1937), to(#f11462));
+    background: -webkit-linear-gradient(right, #ef1937, #f11462);
+    background: -o-linear-gradient(right, #ef1937, #f11462);
+    background: linear-gradient(to left, #ef1937, #f11462);
+    top: 10px;
+    width: 36px;
+    height: 36px;
+    right: -15px; }
     .form-def .fancybox-close-small:after {
-      color: #ef1937;
-      font-size: 35px; }
-    .form-def .fancybox-close-small:hover:after {
-      color: #ef1937; }
-    .form-def .fancybox-close-small:focus:after {
-      outline: none; }
-
-@media (min-width: 992px) {
-  .form-bid {
-    min-width: 420px; } }
-
-.form-bid label {
-  font-weight: 400; }
-
-.form-bid .label-title {
-  font-size: 0.9em;
-  color: #868686;
-  padding-bottom: 5px;
-  display: inline-block; }
-
-.form-bid .fancybox-close-small:after {
-  color: #ef1937;
-  font-size: 25px; }
-
-.form-bid .fancybox-close-small:hover:after {
-  color: #ef1937; }
+      font-size: 28px;
+      font-weight: 600; }
+  .form-def .form-content {
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px 25px;
+    background-color: white;
+    color: black; }
 
 .form-success .icon-content {
   text-align: center; }
@@ -8889,10 +8865,20 @@ figcaption {
   position: relative;
   overflow: hidden; }
   .bnr-slider .lang {
+    color: white;
     position: absolute;
-    bottom: 0; }
+    bottom: 30px;
+    z-index: 1;
+    left: -webkit-calc(50% - 570px);
+    left: calc(50% - 570px); }
     .bnr-slider .lang li {
-      display: inline-block; }
+      display: inline-block;
+      list-style: none;
+      padding-right: 6px;
+      padding-left: 2px;
+      position: relative; }
+      .bnr-slider .lang li:not(:last-child) {
+        border-right: 1px solid white; }
 
 .bnr-carousel {
   background-image: url("../img/bg/bg-slider.jpg");
@@ -8921,7 +8907,7 @@ figcaption {
     -webkit-filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
     padding-bottom: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
@@ -9290,9 +9276,13 @@ figcaption {
   margin-top: -200px;
   z-index: 1;
   position: relative; }
+  .short-info, .short-info .container, .short-info .vi .vi-container, .vi .short-info .vi-container, .short-info .vi .vi-content, .vi .short-info .vi-content, .short-info .bnr-carousel .container-arrows, .bnr-carousel .short-info .container-arrows, .short-info .fancybox-caption {
+    pointer-events: none; }
+    .short-info *, .short-info .container *, .short-info .vi .vi-container *, .vi .short-info .vi-container *, .short-info .vi .vi-content *, .vi .short-info .vi-content *, .short-info .bnr-carousel .container-arrows *, .bnr-carousel .short-info .container-arrows *, .short-info .fancybox-caption * {
+      pointer-events: auto; }
   .short-info .flex {
     height: 115px;
-    padding: 40px 30px;
+    padding: 10px 30px;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
@@ -9309,6 +9299,22 @@ figcaption {
       margin-left: 20px;
       font-size: 33px;
       text-shadow: 1px 1px 5px #ef1937; }
+  .short-info .short-info-phone {
+    background: -webkit-gradient(linear, right top, left top, from(#ef1937), to(#f11462));
+    background: -webkit-linear-gradient(right, #ef1937, #f11462);
+    background: -o-linear-gradient(right, #ef1937, #f11462);
+    background: linear-gradient(to left, #ef1937, #f11462);
+    color: white; }
+    .short-info .short-info-phone p {
+      text-align: center;
+      line-height: 180%; }
+    .short-info .short-info-phone big {
+      font-size: 1.28571em; }
+    .short-info .short-info-phone .flex {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
 
 @-webkit-keyframes glare {
   to {
@@ -11904,13 +11910,13 @@ html .p-0 {
 .relative {
   position: relative; }
 
-.trans-v-center, .trans-center, .checkbox-style-1:before {
+.trans-v-center, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after {
   top: 50%; }
 
-.trans-h-center, .trans-center, .checkbox-style-1:before {
+.trans-h-center, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after {
   left: 50%; }
 
-.trans-v-center, .trans-h-center, .trans-center, .checkbox-style-1:before {
+.trans-v-center, .trans-h-center, .trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after {
   position: absolute; }
 
 .trans-v-center {
@@ -11923,7 +11929,7 @@ html .p-0 {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%); }
 
-.trans-center, .checkbox-style-1:before {
+.trans-center, .checkbox-style-1:before, .form-def .fancybox-close-small:after {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }

@@ -583,68 +583,35 @@ textarea.form-control{
 }
 
 .form-def{
-	background-color: white;
-	background-size: cover;
-	color: black;
-	padding: 10px 40px;
-	
-	@media (min-width: 992px) {
-		background-image: url('../img/other/callbaby.png');
-		background-repeat: no-repeat;
-		background-position: -50px;
-		background-size: auto;
-		padding-left: 160px;
-		padding-right: 20px;
-	}
-	.form-main{
-		max-width: 320px;
-	}
-
-
-
-	h1, h3{
-		margin-top: 0;
-		margin-bottom: 0;
+	background-color: $color-3;
+	color: white;
+	overflow: visible;
+	max-width: 370px;
+	h2{
+		font-size: em(18);
+		text-transform: uppercase;
 	}
 	.fancybox-close-small{
-		top: 15px;
-    right: 15px;
-    &:after{
-    	color: $color-1;
-   		font-size: 35px;
-    }
- 		&:hover:after{
- 			color: $color-1;
- 		}
-    &:focus:after{
-    	outline: none;
-    }
+		background: $gradient-1;
+		top: 10px;
+		width: 36px;
+		height: 36px;
+		right: -15px;
+		&:after{
+			@extend .trans-center;
+			font-size: 28px;
+			font-weight: 600;
+		}
 	}
-}
-.form-bid{
-	//max-width: 360px;
-	@media (min-width: 992px) {
-		min-width: 420px;
-	}
-	label{
-		font-weight: 400;
-	}
-	.label-title{
+	.form-content{
 		font-size: 0.9em;
-		color: $color-gray-3;
-		padding-bottom: 5px;
-		display: inline-block;
+		text-align: center;
+		padding: 10px 25px;
+		background-color: white;
+		color: black;
 	}
-	.fancybox-close-small{
-    &:after{
-    	color: $color-1;
-    	font-size: 25px;
-    }
- 		&:hover:after{
- 			color: $color-1;
- 		}
- 	}
 }
+
 .form-success{
 	.icon-content{
 		text-align: center;
