@@ -37,6 +37,7 @@ $header-min-menu: 70px;
 	display: none;
 	@media ( max-width: 991px ){
 		height: 70px;
+		display: block;
 	}
 }
 .header-offset{

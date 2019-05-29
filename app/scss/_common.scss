@@ -90,19 +90,6 @@ $gradient-1: linear-gradient(to left, $color-1, $color-2);
 ::-o-scrollbar-track-piece{
 	background-color: rgba(white, 0.5);
 }
-// IE
-html{
-	-ms-scrollbar-track-color: rgba(0, 0, 0, 0);
-	-ms-scrollbar-face-color: $color-scroll;
-	-ms-scrollbar-shadow-color: $color-scroll;
-	-ms-scrollbar-base-color: lighten($color-scroll, 5%);
-
-	-ms-scroll-translation: vertical-to-horizontal;
-	-ms-scroll-snap-type: mandatory;
-	-ms-scrollbar-3dlight-color: $color-scroll;
-	-ms-scrollbar-darkshadow-color: darken($color-scroll, 5%);
-	-ms-scrollbar-highlight-color: transparent;
-}
 ::selection {
     background: $color-1;
     color: #fff;
@@ -397,6 +384,9 @@ table {
 .shadow-row{
 	box-shadow: 0 5px 15px -15px rgba(black, 0.8);
 }
+.shadow-style-1{
+	box-shadow:0 2px 11px -2px rgba($color-1, 0.8);	
+}
 .border-default{
 	border: 1px solid $color-gray-3;
 }
@@ -597,6 +587,18 @@ table {
 }
 
 
+@keyframes togglegradient-1{
+	to{
+		//transform: translateX(600px);
+		background-position: 180px 0;
+	}
+	35%{
+		background-position:  100px 0;
+	}
+	from{
+		background-position:  -180px 0;
+	}
+}
 
 
 .btn-def, .btn-icon{
@@ -613,11 +615,14 @@ table {
 		color: white;
 	}
 	&:not([class*="bg-color"]){
-		background: linear-gradient( to right, $color-2, $color-1 );
+		@extend  .shadow-style-1;
+		background-image: linear-gradient( to right, $color-1, $color-2 );
 	}	
 	&:not(.changecolor-none):hover{
 		//box-shadow: 0px 0px 15px 2px $color-1;
-		background-color: darken($color-1, 10%);
+		animation: togglegradient-1 1s linear infinite;
+		background-repeat: repeat;
+		background-image: linear-gradient( to right, $color-2,  $color-1, $color-2);
 	}
 	&.radius{
 		border-radius: 20px;
@@ -792,7 +797,14 @@ table {
 		color: #666666;
 	}
 }
-
+@keyframes bodyanime{
+	from{
+		background-position-y: -100px;
+	}
+	to{
+		background-position-y: 100000px;	
+	}
+}
 body{
 	-ms-text-size-adjust: none;
 	-webkit-text-size-adjust: none;
@@ -803,10 +815,11 @@ body{
 	overflow-x: hidden;
 	//color: white;
 	//height: auto;
+	background-image: url('../img/bg/bg-body.jpg');
 	background-color: white;
 	background-repeat: repeat-y;
-	background-position: center 0;
-	
+	//animation: bodyanime 900s linear infinite;
+	background-position: center -100px;
 }
 
 
@@ -996,7 +1009,6 @@ main{
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}
-
 	*:not(figure):not(div){
 		//letter-spacing: 0.5px;
 	}

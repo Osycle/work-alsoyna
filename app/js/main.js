@@ -284,6 +284,17 @@
 			$(window).trigger("resize");
 		}
 
+		//Лимит текста
+		$("[data-text-limit]").map(function( i, el ){
+			el = $(el);
+			var text = el.text();
+			var textLimit = el.attr("data-text-limit");
+
+			if( text.length > textLimit*1 ){
+				text = text.substring(0, textLimit )
+				el.text( text+ " ..." );
+			}
+		})
 
 
 		//var scene = $(".product-img");
