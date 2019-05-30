@@ -106,13 +106,36 @@ $header-min-menu: 70px;
 
 .socicons{
 	font-size: 14px;
+	text-align: center;
+	.list{
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
 	li{
 		display: inline-block;
-		transition: color 0.3s ease;
 		margin-left: 8px;
+		width: 45px;
+		height: 45px;
+		justify-content: center;
+		text-align: center;
+		background-color: #efefef;
+		font-size: em(20);
+		&:hover{
+			background: $gradient-1;
+			color: white;
+			filter: brightness(120%);
+			@extend .shadow-style-1;
+		}
 		&:nth-child(1){
 			margin-left: 0;
 		}
+		.fa-facebook{
+			font-size: em(14);
+		}
+		.fa-paper-plane{
+			font-size: em(12);
+		}
+
 		a{
 			display: flex;
 			height: 100%;
@@ -120,9 +143,6 @@ $header-min-menu: 70px;
 			i{
 				width: 100%;
 			}
-		}
-		&:hover{
-			color: $color-2;
 		}
 	}
 

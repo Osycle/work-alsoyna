@@ -918,6 +918,7 @@ h1{
 	font-weight: 600;
 	line-height: 120%;
 	font-family: $font-family-2;
+	color: #333333;
 	@media (max-width: 991px) {
 		font-size: em(26);
 	}
@@ -938,7 +939,7 @@ h3{
 	}
 }
 h4{
-	font-weight: 700;
+	font-weight: 900;
 	font-size: em(18);
 }
 h5{	
