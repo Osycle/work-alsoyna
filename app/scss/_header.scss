@@ -28,6 +28,19 @@ $header-min-menu: 70px;
 		margin-top: 5px;
 		margin-bottom: 5px;
 	}
+	&.header-article{
+		position: relative;
+		background-image: url('../img/bg/bg-header.jpg');
+		background-size: cover;
+		.header-top-content{
+			height: 95px;
+		}
+		.header-logo{
+			img{
+				width: 293px;
+			}
+		}
+	}
 }
 
 .header-hidden{
@@ -88,10 +101,9 @@ $header-min-menu: 70px;
 			background-color: $color-gray-4;
 		}
 		.header-top-content{
-			overflow: hidden;
-			height: 0;
+			height: 80px;
 			.menu{
-				color: $color-gray-4;
+				color: white;
 			}
 		}
 		.header-logo{
@@ -234,7 +246,7 @@ ul[class*="sub-menu"]{
 		width: 100%;
 		padding: 0 15px;
 		transition: all 0.3s ease;
-		background: linear-gradient(to left, rgba(white, 0.1), rgba(white, 0.1));
+		background: linear-gradient(to left, #424958, #424958);
 		&:not(:last-child){
 			border-bottom: 1px solid rgba(black, 0.1);
 		}

@@ -122,9 +122,20 @@
 		<!-- MIN MENU -->
 		<div id="min-menu" data-aos="fade">
 			<ul>
-				<li><a href="pavf.html" title=>Владельцам товаров и услуг</a></li>
-				<li><a href="contacts.html" title=>Контакты</a></li>
-				<li><a href="conditions.html" title=>Условия</a></li>
+				<li><a href="news.html">Новости</a></li>
+				<li><a href="about.html">О нас</a>
+					<ul>
+						<li><a href="history.html">История</a></li>
+						<li><a href="equipment.html">Оборудование</a></li>
+						<li><a href="gallery-photo.html">Фото галерея</a></li>
+						<li><a href="certifications.html">Сертификаты</a></li>
+						<li><a href="partners.html">Партнеры</a></li>
+					</ul>
+				</li>
+				<li><a href="productions.html">Продукция</a></li>
+				<li><a href="services.html">Лабораторные услуги</a></li>
+				<li><a href="vacancies.html">Вакансии</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 		</div>
 		<!-- MIN MENU HEADER -->
@@ -156,7 +167,7 @@
 		</div>
 		<!-- MAIN -->
 		<main data-aos="fade" data-aos-delay="0">
-
+			<div class="bg-body"></div>
 			<!-- bnr-slider -->
 			<div class="bnr-slider">
 				<div class="bnr-carousel">
@@ -365,7 +376,7 @@
 										<div class="img" style="background-image: url('img/other/short-productions-3.jpg');"></div>
 									</div>
 									<div class="btn-def">
-										<a href="" title-mirror="Стеклотара">Лабораторные услуги <i class="fa fa-angle-right"></i></a>
+										<a href="" title-mirror="Лабораторные услуги">Лабораторные услуги <i class="fa fa-angle-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -430,6 +441,7 @@
 					</div>
 
 					<div class="short-news-wrapper clearfix m-v-30 clearfix">
+						<div class="text-vertical">Свежые новости</div>
 						<div class="short-news-items col-md-6 clearfix">
 							<figure>
 								<div class="img-content">
@@ -665,11 +677,32 @@
 				</div>
 			</div>
 
+			<div class="map-locations">
+				<div class="img-content">
+					<img src="img/other/map.jpg">
+					<div class="map-dots">
+						<span class="map-dot-1">
+							<a href="javascript:;" data-src="#map-canvas-1" data-fancybox><i class="icm icm-placeholder-filled-point"></i></a>
+							<div class="hide"><div id="map-canvas-1" data-lat="41.34765" data-lng="69.354354343" class="map-location"></div></div>
+						</span>
+						<span class="map-dot-2">
+							<a href="javascript:;" data-src="#map-canvas-2" data-fancybox><i class="icm icm-placeholder-filled-point"></i></a>
+							<div class="hide"><div id="map-canvas-2" data-lat="41.34765" data-lng="69.354354343" class="map-location"></div></div>
+						</span>
+						<span class="map-dot-3">
+							<a href="javascript:;" data-src="#map-canvas-3" data-fancybox><i class="icm icm-placeholder-filled-point"></i></a>
+							<div class="hide"><div id="map-canvas-3" data-lat="41.34765" data-lng="69.354354343" class="map-location"></div></div>
+						</span>
+
+					</div>
+				</div>
+			</div>
+
 		</main><!-- ./MAIN -->
 		<!-- FOOTER -->
 		<footer id="footer" class="text-center-sm">
 
-			<div class="copy-content text-center-sm color-black">
+			<div class="copy-content text-center-sm ">
 				<div class="container clearfix">
 					<div class="row">
 						<div class="copyright col-md-4 p-v-10 p-h-15">
@@ -693,6 +726,72 @@
 	<!-- SCRIPTS -->
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag"></script>
+  <script type="text/javascript">
+
+      var icon = {
+        path: 'M16.5,51s-16.5-25.119-16.5-34.327c0-9.2082,7.3873-16.673,16.5-16.673,9.113,0,16.5,7.4648,16.5,16.673,0,9.208-16.5,34.327-16.5,34.327zm0-27.462c3.7523,0,6.7941-3.0737,6.7941-6.8654,0-3.7916-3.0418-6.8654-6.7941-6.8654s-6.7941,3.0737-6.7941,6.8654c0,3.7916,3.0418,6.8654,6.7941,6.8654z',
+        anchor: new google.maps.Point(16.5, 51),
+        fillColor: '#ef1937',
+        fillOpacity: 1,
+        strokeWeight: 0,
+        scale: 0.9
+      };
+
+	    function initialize(LatLngItems) {
+	    	for (var i = 0; i < LatLngItems.length; i++) {
+		    	var map;
+		    	var lat = LatLngItems.eq(i).attr("data-lat");
+		    	var lng = LatLngItems.eq(i).attr("data-lng");
+		    	console.log(lng);
+		      var mapOptions = {
+		        mapTypeId: google.maps.MapTypeId.ROADMAP,
+		        mapTypeControl: true,
+		        zoom: 12,
+		        zoomControl: true,
+		        zoomControlOptions: {
+		          style: google.maps.ZoomControlStyle.DEFAULT,
+		          position: google.maps.ControlPosition.DEFAULT
+		        },
+		        panControl: true,
+		        panControlOptions: {
+		          position: google.maps.ControlPosition.LEFT_TOP
+		        },
+		        streetViewControl: true,
+		        scaleControl: true,
+		        overviewMapControl: true,
+		        center: new google.maps.LatLng(lat, lng)
+		      };
+		      mapContainer = document.getElementById('map-canvas-'+ ([i]*1+1) ) || null;
+		      if( !mapContainer )
+		      	return;
+		      map = new google.maps.Map(mapContainer, mapOptions);
+
+		      map.setOptions({
+		        //styles: mapStyles,
+		        disableDefaultUI: true
+		      });
+		      var marker = new google.maps.Marker({
+		        position: new google.maps.LatLng(lat, lng),
+		        map: map,
+		        icon: icon,
+		        title: 'marker'
+		      });
+	    	}
+	    }
+	    initialize( $(".map-location") );
+	    google.maps.event.addDomListener(window, 'load', initialize);
+
+
+	    // function checkResize() {
+	    //   var center = map.getCenter();
+	    //   google.maps.event.trigger(map, 'resize');
+	    //   map.setCenter(center);
+	    // }
+
+	    // window.onresize = checkResize;
+	  
+  </script>
 </body>
 
 </html>

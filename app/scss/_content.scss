@@ -160,20 +160,24 @@ figcaption{
 		bottom: 30px;
 		z-index: 1;
 		left: calc(50% - 570px);
-		li{
-			display: inline-block;
-			list-style: none;
-			//margin: 0 5px;
-			padding-right: 6px;
-			padding-left: 2px;
-			position: relative;
-			&:not(:last-child){
-				border-right: 1px solid white;
-			}
+	}
+}
+.lang{
+	li{
+		display: inline-block;
+		list-style: none;
+		//margin: 0 5px;
+		padding-right: 6px;
+		padding-left: 2px;
+		position: relative;
+		&:not(:last-child){
+			border-right: 1px solid white;
+		}
+		&.active, &:hover{
+			color: $color-2;
 		}
 	}
 }
-
 
 
 
@@ -193,6 +197,9 @@ figcaption{
 		.align-i-center{
 			height: $slider-height;
 		}
+	}
+	h1{
+		color: white;
 	}
 	.container-arrows{
     @extend .container;
@@ -666,6 +673,12 @@ figcaption{
 				}
 			}
 		}
+		&:hover{
+			.bg-shadow{
+				background-position:  0 100px;
+				animation: glare 10s linear infinite;
+			}
+		}
 	}
 	.btn-def{
 		z-index: 1;
@@ -733,11 +746,11 @@ figcaption{
 		//$color-1: black;
 		//$color-2: white;
 		width: 100%;
-		background-position: 135px 0;
+		transition: all 0.3s ease;
+		background-position: 0 180px;
 		height: 100%;
 		position: absolute;
 		transition: 0.5s;
-		animation: glare 10s linear infinite;
 		background-repeat: repeat;
 		//background: linear-gradient(to top, $color-1 0%, $color-2 50%, $color-1 100%);
 		background-image: linear-gradient(0, $color-1 0%, $color-2 15%, $color-1 40%, $color-2 60%, $color-1 100%);
@@ -878,7 +891,14 @@ figcaption{
 }
 .short-news-wrapper{
 	background-color: white;
+	position: relative;
 	@extend .shadow-def;
+	.text-vertical{
+		color: white;
+		top: 172px;
+		color: black;
+		left: -30px;
+	}
 }
 .short-news-items{
 	&.short-news-main{
@@ -1100,7 +1120,7 @@ figcaption{
 		height: 2px;
 		background-image: $gradient-1;
 		box-shadow: 0 0 2px 0 $color-1;
-		bottom: 10px;
+		bottom: 3px;
 		@media (min-width: 992px){
 			transform: translateX(15px);
 		}
@@ -1152,6 +1172,9 @@ figcaption{
 		height: 150px;
 		background-size: contain;
 	}
+	@media (min-width: 992px){
+		width: calc(75% - 5px);
+	}
 }
 .short-partners-imgs{
 	text-align: center;
@@ -1180,5 +1203,54 @@ figcaption{
 	}
 	.info-phone{
 		font-size: 0.9em;
+	}
+}
+
+
+.map-locations{
+	margin: 30px 0;
+	position: relative;
+	@media (max-width: 991px){
+		display: none;
+	}
+	img{
+		width: 100%;
+	}
+	.map-dots{
+		@extend .fuller;
+		top: 0;
+		left: 0;
+		.icm{
+			font-size: em(20);
+			color: $color-1;
+			text-shadow: 1px 1px 5px #ef1937;
+		}
+		[class*="map-dot-"]{
+			position: absolute;
+		}
+		.map-dot-1{
+			left: 41.5%;
+			top: 27.6%;
+		}
+		.map-dot-2{
+	    left: 61.6%;
+	    top: 46%;
+		}
+		.map-dot-3{
+	    left: 50%;
+	    top: 85%;
+		}
+
+	}
+}
+.map-location{
+	height: 400px;
+	@extend .trans-center;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	@media (min-width: 992px) {
+		width: 75%;
 	}
 }

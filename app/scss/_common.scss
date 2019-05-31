@@ -182,12 +182,21 @@ $gradient-1: linear-gradient(to left, $color-1, $color-2);
 /*
 		--BREADCRUMP--
 */
+.breadcrumb-container{
+	.lang{
+		padding: 10px 0;
+		li{
+			border-color: #4c4c4c !important;
+		}
+	}
+}
 .breadcrumb{
 	background: transparent;
 	padding: 8px 0;
 	font-size: 0.9em;
 	z-index: 1;
 	position: relative;
+	font-weight: 500;
 	&, a, .active{ 		
 		a:hover{
 			transform: translateY(-5px);
@@ -200,15 +209,15 @@ $gradient-1: linear-gradient(to left, $color-1, $color-2);
 	}
 	a{
 		vertical-align: middle;
-		color: $color-1;
+		color: $color-gray-3;
 	}
 	.active{
 		a{
-			color: black;
+			color: #4c4c4c;
 		}
 	}
 	& > li + li:before{
-		color: black;
+		color: #4c4c4c;
 		//font-family: FontAwesome;
 		content: "/";
 		font-weight: normal;
@@ -818,7 +827,7 @@ body{
 	background-image: url('../img/bg/bg-body.jpg');
 	background-color: white;
 	background-repeat: repeat-y;
-	//animation: bodyanime 900s linear infinite;
+	animation: bodyanime 900s linear infinite;
 	background-position: center -100px;
 }
 
