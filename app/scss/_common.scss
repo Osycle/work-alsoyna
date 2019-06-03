@@ -560,6 +560,7 @@ table {
 	text-align: center;	
 	overflow: hidden;
 	font-family: $font-family-1;
+	font-weight: 600;
 	&.text-wrap{
 		white-space: wrap;
 	}
@@ -947,6 +948,7 @@ h3{
 	}
 }
 h4{
+	font-family: $font-family-2;
 	font-weight: 900;
 	font-size: em(18);
 }
