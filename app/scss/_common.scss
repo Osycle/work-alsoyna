@@ -197,6 +197,9 @@ $gradient-1: linear-gradient(to left, $color-1, $color-2);
 	z-index: 1;
 	position: relative;
 	font-weight: 500;
+	@media (min-width: 992px) {
+		margin-top: 20px;
+	}
 	&, a, .active{ 		
 		a:hover{
 			transform: translateY(-5px);
