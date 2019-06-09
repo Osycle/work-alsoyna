@@ -29,7 +29,6 @@ $header-min-menu: 70px;
 		margin-bottom: 5px;
 	}
 	&.header-article{
-		position: relative;
 		background-image: url('../img/bg/bg-header.jpg');
 		background-size: cover;
 		.header-top-content{
@@ -45,9 +44,9 @@ $header-min-menu: 70px;
 
 .header-hidden{
 	//position: relative;
-	height: $header-top-height+$header-bottom-height;
+	height: 95px;
 	transition: height 0.3s ease-in-out 0.4s;
-	display: none;
+	display: block;
 	@media ( max-width: 991px ){
 		height: 70px;
 		display: block;

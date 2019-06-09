@@ -361,8 +361,15 @@
 		});
 		$(window).trigger("scroll");
 
-
-
+		//Изменение цвета стеклотары
+		$(".choice-color-item").on("click", function(){
+			var that = $(this);
+			var index = that.index();
+			that
+			.addClass("is-selected").siblings().removeClass("is-selected")
+			.closest(".wrapper").find(".choice-imgs img").eq(index)
+			.addClass("is-selected").siblings().removeClass("is-selected");
+		})
 
 
 

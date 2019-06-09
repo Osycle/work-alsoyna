@@ -72,7 +72,7 @@ gulp.task('scripts', () =>
 			//app+'/js/plugins/jquery.elevateZoom.min.js',
 			app+'/js/plugins/jquery.mmenu.all.js',
 			app+'/js/plugins/smooth-scroll-link.min.js',
-			app+'/js/plugins/parallax-mouse.js',
+			//app+'/js/plugins/parallax-mouse.js',
 			//app+'/js/plugins/parallax.js',
 			app+'/js/plugins/flickity.js'
 		])

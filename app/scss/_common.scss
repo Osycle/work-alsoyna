@@ -185,6 +185,7 @@ $gradient-1: linear-gradient(to left, $color-1, $color-2);
 .breadcrumb-container{
 	.lang{
 		padding: 10px 0;
+		margin: 20px 0;
 		li{
 			border-color: #4c4c4c !important;
 		}
@@ -259,7 +260,8 @@ $gradient-1: linear-gradient(to left, $color-1, $color-2);
 	overflow-x: auto;
 }
 .table > thead > tr > th, table > thead > tr > th, .table > thead > tr > td, table > thead > tr > td, .table > tbody > tr > th, table > tbody > tr > th, .table > tbody > tr > td, table > tbody > tr > td, .table > tfoot > tr > th, table > tfoot > tr > th, .table > tfoot > tr > td, table > tfoot > tr > td{
-	padding: 30px;
+	border: none;	
+	padding: 3px 15px; 
 }
 table { 
 	border-collapse: collapse;
@@ -284,7 +286,7 @@ table {
 			background-color: rgba($color-gray-1, 0.4);
 		}
 		tr:nth-child(even){
-			background-color: rgba($color-gray-1, 0.0);
+			background-color: transparent;
 		}
 	}
 
