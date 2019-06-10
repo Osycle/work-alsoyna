@@ -165,7 +165,12 @@
 												<li><a href="partners.html">Партнеры</a></li>
 											</ul>
 										</li>
-										<li><a href="productions.html">Продукция</a></li>
+										<li><a href="productions.html">Продукция</a>
+											<ul class="sub-menu-1">
+												<li><a href="productions.html">Продукция</a></li>
+												<li><a href="glasscontain.html">Оборудование</a></li>
+											</ul>
+										</li>
 										<li><a href="services.html">Лабораторные услуги</a></li>
 										<li><a href="vacancies.html">Вакансии</a></li>
 										<li><a href="contacts.html">Контакты</a></li>
@@ -193,7 +198,12 @@
 						<li><a href="partners.html">Партнеры</a></li>
 					</ul>
 				</li>
-				<li><a href="productions.html">Продукция</a></li>
+				<li><a href="productions.html">Продукция</a>
+					<ul>
+						<li><a href="productions.html">Продукция</a></li>
+						<li><a href="glasscontain.html">Оборудование</a></li>
+					</ul>
+				</li>
 				<li><a href="services.html">Лабораторные услуги</a></li>
 				<li><a href="vacancies.html">Вакансии</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
@@ -347,7 +357,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -402,7 +412,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -457,7 +467,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -512,7 +522,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -567,7 +577,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -622,7 +632,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -677,7 +687,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -732,7 +742,7 @@
 										</tbody>
 									</table>
 									<div class="link-style-1 text-right-md">
-										<a href="">Заказать</a>
+										<a href="javascript:;" data-src="#form_productions" data-fancybox>Заказать</a>
 									</div>
 								</div>
 							</div>
@@ -804,9 +814,9 @@
 			<div class="map-locations">
 				<div class="img-content">
 					<a href="javascript:;" data-src="#map-canvas-1" data-fancybox>
-						<img src="img/other/map.jpg">
+						<img src="img/other/map.png">
 					</a>
-					<div id="map-canvas-1"  class="map-location"></div>
+					<div class="hide"><div id="map-canvas-1"  class="map-location"></div></div>
 				</div>
 			</div>
 
@@ -850,61 +860,63 @@
         scale: 0.9
       };
 
+		  var map;
 	    function initialize() {
 	    	
-		    	var map;
-		    	
-		      var mapOptions = {
-		        mapTypeId: google.maps.MapTypeId.ROADMAP,
-		        mapTypeControl: true,
-		        zoom: 12,
-		        zoomControl: true,
-		        zoomControlOptions: {
-		          style: google.maps.ZoomControlStyle.DEFAULT,
-		          position: google.maps.ControlPosition.DEFAULT
-		        },
-		        panControl: true,
-		        panControlOptions: {
-		          position: google.maps.ControlPosition.LEFT_TOP
-		        },
-		        streetViewControl: true,
-		        scaleControl: true,
-		        overviewMapControl: true,
-		        center: new google.maps.LatLng("41.34765", "69.354354343")
-		      };
+	      var mapOptions = {
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        mapTypeControl: true,
+	        zoom: 14,
+	        zoomControl: true,
+	        zoomControlOptions: {
+	          style: google.maps.ZoomControlStyle.DEFAULT,
+	          position: google.maps.ControlPosition.DEFAULT
+	        },
+	        panControl: true,
+	        panControlOptions: {
+	          position: google.maps.ControlPosition.LEFT_TOP
+	        },
+	        streetViewControl: true,
+	        scaleControl: true,
+	        overviewMapControl: true,
+	        center: new google.maps.LatLng("41.35765", "69.354354343")
+	      };
 
 
-		      mapContainer = document.getElementById('map-canvas-1') || null;
-		      if( !mapContainer ) 
-		      	return;
+	      mapContainer = document.getElementById('map-canvas-1') || null;
+	      if( !mapContainer ) 
+	      	return;
 
 
-		      map = new google.maps.Map(mapContainer, mapOptions);
-		     	map.setOptions({
-		        //styles: mapStyles,
-		        disableDefaultUI: true
-		      });
+	      map = new google.maps.Map(mapContainer, mapOptions);
+	     	map.setOptions({
+	        //styles: mapStyles,
+	        disableDefaultUI: true
+	      });
 
-        var infowindow = new google.maps.InfoWindow();
+        window.infowindow = new google.maps.InfoWindow();
         var marker, i;
 
         var locations = [
-		      ['Bondi Beach', 41.34765, 69.354354343, 1],
-		      ['Coogee Beach', 41.35765, 69.364354343, 2]
+		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Терминал местных авиалиний Ташкент-3, Ташкент</h5></div>', 41.34765, 69.354354343],
+		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Терминал местных авиалиний Ташкент-3, Ташкент</h5></div>', 41.34765, 69.364354343],
+		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Bondi Beach</h5></div>', 41.35765, 69.364354343]
 		    ];
        for (i = 0; i < locations.length; i++) {
-            marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-				        map: map,
-				        icon: icon,
-				        title: 'marker'
-            });
-            google.maps.event.addListener(marker, 'click', (function (marker, i) {
-                return function () {
-                    infowindow.setContent(locations[i][0]);
-                    infowindow.open(map, marker);
-                }
-            })(marker, i));
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+		        map: map,
+		        icon: icon,
+		        title: 'marker'
+          });
+          google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+              infowindow.setContent(locations[0][0]);
+              infowindow.open(map, marker);
         }
 
 	    }

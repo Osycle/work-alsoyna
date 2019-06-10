@@ -306,7 +306,7 @@ figcaption{
 			//display: none !important;
 		}
 		.img-ellipse, .desc-content, .product-img{
-			display: none !important;
+			//display: none !important;
 		}
 	} 
 
@@ -1340,7 +1340,7 @@ figcaption{
 	margin: 30px 0;
 	position: relative;
 	@media (max-width: 991px){
-		display: none;
+		//display: none;
 	}
 	img{
 		width: 100%;
@@ -1373,7 +1373,7 @@ figcaption{
 	}
 }
 .map-location{
-	height: 400px;
+	height: 80%;
 	@extend .trans-center;
 	margin-top: 0;
 	margin-left: auto;
@@ -1382,8 +1382,26 @@ figcaption{
 	@media (min-width: 992px) {
 		width: 75%;
 	}
+	.gm-style-iw{
+    //padding: 0;
+    border-radius: 0;
+	}
 }
-
+.mapblock{
+	display: flex;
+	h5{
+		padding: 0 15px;
+		max-width: 200px;
+	}
+	.img{
+		width: 100px;
+		background-size: cover;
+		height: 100px;
+	}
+	img{
+		max-width: 150px;
+	}
+}
 
 
 
@@ -2389,9 +2407,11 @@ figcaption{
 				min-width: 80px;
 			}
 		}
-		&>div{
-			width: 100%;
-			margin-right: 0;
+		@media (max-width: 991px) {
+			&>div{
+				width: 100%;
+				margin-right: 0;
+			}
 		}
 	}
 }

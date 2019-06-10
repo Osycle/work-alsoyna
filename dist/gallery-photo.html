@@ -104,7 +104,12 @@
 												<li><a href="partners.html">Партнеры</a></li>
 											</ul>
 										</li>
-										<li><a href="productions.html">Продукция</a></li>
+										<li><a href="productions.html">Продукция</a>
+											<ul class="sub-menu-1">
+												<li><a href="productions.html">Продукция</a></li>
+												<li><a href="glasscontain.html">Оборудование</a></li>
+											</ul>
+										</li>
 										<li><a href="services.html">Лабораторные услуги</a></li>
 										<li><a href="vacancies.html">Вакансии</a></li>
 										<li><a href="contacts.html">Контакты</a></li>
@@ -132,7 +137,12 @@
 						<li><a href="partners.html">Партнеры</a></li>
 					</ul>
 				</li>
-				<li><a href="productions.html">Продукция</a></li>
+				<li><a href="productions.html">Продукция</a>
+					<ul>
+						<li><a href="productions.html">Продукция</a></li>
+						<li><a href="glasscontain.html">Оборудование</a></li>
+					</ul>
+				</li>
 				<li><a href="services.html">Лабораторные услуги</a></li>
 				<li><a href="vacancies.html">Вакансии</a></li>
 				<li><a href="contacts.html">Контакты</a></li>
@@ -313,22 +323,10 @@
 
 			<div class="map-locations">
 				<div class="img-content">
-					<img src="img/other/map.jpg">
-					<div class="map-dots">
-						<span class="map-dot-1">
-							<a href="javascript:;" data-src="#map-canvas-1" data-fancybox><i class="icm icm-placeholder-filled-point"></i></a>
-							<div class="hide"><div id="map-canvas-1" data-lat="41.34765" data-lng="69.354354343" class="map-location"></div></div>
-						</span>
-						<span class="map-dot-2">
-							<a href="javascript:;" data-src="#map-canvas-2" data-fancybox><i class="icm icm-placeholder-filled-point"></i></a>
-							<div class="hide"><div id="map-canvas-2" data-lat="41.34765" data-lng="69.354354343" class="map-location"></div></div>
-						</span>
-						<span class="map-dot-3">
-							<a href="javascript:;" data-src="#map-canvas-3" data-fancybox><i class="icm icm-placeholder-filled-point"></i></a>
-							<div class="hide"><div id="map-canvas-3" data-lat="41.34765" data-lng="69.354354343" class="map-location"></div></div>
-						</span>
-
-					</div>
+					<a href="javascript:;" data-src="#map-canvas-1" data-fancybox>
+						<img src="img/other/map.png">
+					</a>
+					<div class="hide"><div id="map-canvas-1"  class="map-location"></div></div>
 				</div>
 			</div>
 
@@ -372,58 +370,77 @@
         scale: 0.9
       };
 
-	    function initialize(LatLngItems) {
-	    	for (var i = 0; i < LatLngItems.length; i++) {
-		    	var map;
-		    	var lat = LatLngItems.eq(i).attr("data-lat");
-		    	var lng = LatLngItems.eq(i).attr("data-lng");
-		    	
-		      var mapOptions = {
-		        mapTypeId: google.maps.MapTypeId.ROADMAP,
-		        mapTypeControl: true,
-		        zoom: 12,
-		        zoomControl: true,
-		        zoomControlOptions: {
-		          style: google.maps.ZoomControlStyle.DEFAULT,
-		          position: google.maps.ControlPosition.DEFAULT
-		        },
-		        panControl: true,
-		        panControlOptions: {
-		          position: google.maps.ControlPosition.LEFT_TOP
-		        },
-		        streetViewControl: true,
-		        scaleControl: true,
-		        overviewMapControl: true,
-		        center: new google.maps.LatLng(lat, lng)
-		      };
-		      mapContainer = document.getElementById('map-canvas-'+ ([i]*1+1) ) || null;
-		      if( !mapContainer )
-		      	return;
-		      map = new google.maps.Map(mapContainer, mapOptions);
+		  var map;
+	    function initialize() {
+	    	
+	      var mapOptions = {
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        mapTypeControl: true,
+	        zoom: 14,
+	        zoomControl: true,
+	        zoomControlOptions: {
+	          style: google.maps.ZoomControlStyle.DEFAULT,
+	          position: google.maps.ControlPosition.DEFAULT
+	        },
+	        panControl: true,
+	        panControlOptions: {
+	          position: google.maps.ControlPosition.LEFT_TOP
+	        },
+	        streetViewControl: true,
+	        scaleControl: true,
+	        overviewMapControl: true,
+	        center: new google.maps.LatLng("41.35765", "69.354354343")
+	      };
 
-		      map.setOptions({
-		        //styles: mapStyles,
-		        disableDefaultUI: true
-		      });
-		      var marker = new google.maps.Marker({
-		        position: new google.maps.LatLng(lat, lng),
+
+	      mapContainer = document.getElementById('map-canvas-1') || null;
+	      if( !mapContainer ) 
+	      	return;
+
+
+	      map = new google.maps.Map(mapContainer, mapOptions);
+	     	map.setOptions({
+	        //styles: mapStyles,
+	        disableDefaultUI: true
+	      });
+
+        window.infowindow = new google.maps.InfoWindow();
+        var marker, i;
+
+        var locations = [
+		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Терминал местных авиалиний Ташкент-3, Ташкент</h5></div>', 41.34765, 69.354354343],
+		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Терминал местных авиалиний Ташкент-3, Ташкент</h5></div>', 41.34765, 69.364354343],
+		      ['<div class="mapblock"><div class="img-content"><div class="img" style="background-image: url(\'img/other/maploc-1.jpg\'"></div></div><h5>Bondi Beach</h5></div>', 41.35765, 69.364354343]
+		    ];
+       for (i = 0; i < locations.length; i++) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(locations[i][1], locations[i][2]),
 		        map: map,
 		        icon: icon,
 		        title: 'marker'
-		      });
-	    	}
+          });
+          google.maps.event.addListener(marker, 'click', (function (marker, i) {
+            return function () {
+              infowindow.setContent(locations[i][0]);
+              infowindow.open(map, marker);
+            }
+          })(marker, i));
+              infowindow.setContent(locations[0][0]);
+              infowindow.open(map, marker);
+        }
+
 	    }
-	    initialize( $(".map-location") );
+	    initialize();
 	    google.maps.event.addDomListener(window, 'load', initialize);
 
 
-	    // function checkResize() {
-	    //   var center = map.getCenter();
-	    //   google.maps.event.trigger(map, 'resize');
-	    //   map.setCenter(center);
-	    // }
+	    function checkResize() {
+	      var center = map.getCenter();
+	      google.maps.event.trigger(map, 'resize');
+	      map.setCenter(center);
+	    }
 
-	    // window.onresize = checkResize;
+	    window.onresize = checkResize;
 	  
   </script>
 </body>
