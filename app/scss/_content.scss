@@ -237,7 +237,7 @@ figcaption{
 
 
 .bnr-carousel{
-	$slider-height: 855px;
+	$slider-height: 100vh;
 	background-image: url('../img/bg/bg-slider.jpg');
 	background-repeat: no-repeat;
 	position: relative;
@@ -254,6 +254,9 @@ figcaption{
 	}
 	h1{
 		color: white;
+	}
+	.parallax-scene{
+		transform-origin: center bottom;
 	}
 	.container-arrows{
     @extend .container;
@@ -301,7 +304,7 @@ figcaption{
     }
 	}
 	.flickity-viewport{
-		height: 900px !important;
+		height: calc(100vh + 100px) !important;
 	}
 	.flickity-slider{
 		//display: none !important;
@@ -611,7 +614,7 @@ figcaption{
 	.product-img{
 		position: absolute;
 		right: 130px;
-		bottom: 50px;
+		bottom: 15px;
 	}
 	.product-details{
 		position: absolute;
@@ -635,7 +638,9 @@ figcaption{
 	}
 }
 .bnr-slider ~ .header-info{
-	display: none;
+	@media (max-width: 991px) {
+		display: none;
+	}
 }
 .header-info{
 	z-index: 1;

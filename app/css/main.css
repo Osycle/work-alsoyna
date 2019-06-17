@@ -9053,9 +9053,13 @@ figcaption {
   .bnr-carousel .carousel-content {
     position: relative; }
     .bnr-carousel .carousel-content .align-i-center {
-      height: 855px; }
+      height: 100vh; }
   .bnr-carousel h1 {
     color: white; }
+  .bnr-carousel .parallax-scene {
+    -webkit-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    transform-origin: center bottom; }
   .bnr-carousel .container-arrows {
     bottom: 0;
     right: 0;
@@ -9113,7 +9117,8 @@ figcaption {
         -ms-flex-pack: center;
         justify-content: center; } }
   .bnr-carousel .flickity-viewport {
-    height: 900px !important; }
+    height: -webkit-calc(100vh + 100px) !important;
+    height: calc(100vh + 100px) !important; }
   .bnr-carousel .flickity-page-dots, .bnr-carousel .flickity-dots-1 .flickity-page-dots {
     width: 10px;
     display: none !important;
@@ -9217,7 +9222,7 @@ figcaption {
         width: 100%; } }
   .bnr-carousel figure {
     overflow: hidden;
-    height: 855px;
+    height: 100vh;
     width: 100%;
     left: 0 !important; }
     .bnr-carousel figure:nth-child(even) .img-ellipse {
@@ -9416,7 +9421,7 @@ figcaption {
   .bnr-carousel .product-img {
     position: absolute;
     right: 130px;
-    bottom: 50px; }
+    bottom: 15px; }
   .bnr-carousel .product-details {
     position: absolute;
     bottom: 0; }
@@ -9435,8 +9440,9 @@ figcaption {
       transform: translate(100%, -2px);
       background-image: url("../img/slider/detail-dot-1.png"); }
 
-.bnr-slider ~ .header-info {
-  display: none; }
+@media (max-width: 991px) {
+  .bnr-slider ~ .header-info {
+    display: none; } }
 
 .header-info {
   z-index: 1;

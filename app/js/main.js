@@ -211,6 +211,16 @@
 			btnPrev.on("click", bnrCarousel, function(e) {
 				e.data.flickity("previous", true);
 			});
+
+
+			var winHeight = $(window).height();
+			bnrCarousel.on( 'settle.flickity', function( event, index ) {
+				var that = $(this);
+				var bnrImgHeight = that.find(".is-selected img").height()
+				console.log(bnrImgHeight);
+				$(".is-selected .parallax-scene").css("transform", "scale(" + (winHeight / (bnrImgHeight * 0.012) >> 0) / 100 + ")" );
+
+			});
 		}
 
 		if ($(".carousel-article").length >= 0) {
@@ -317,10 +327,9 @@
 		})
 
 
-		//var scene = $(".product-img");
+		//Паралакс картин
 		$(".parallax-scene").map(function(i, el){
 			var parallaxInstance = new Parallax(el);
-			console.log(parallaxInstance);
 		})
 
 		//SCROLL
@@ -330,12 +339,12 @@
 		$(window).on("scroll", function(e) {
 
 			//Адаптация хедера при скролинге
-			if ($(window).scrollTop() > 100 && headerRange == false) {
+			if ($(window).scrollTop() > 80 && headerRange == false) {
 
 				headerRange = true;
 				if (minMenu) minMenu.addClass("scrolled");
 
-			} else if ($(window).scrollTop() < 100 && headerRange == true) {
+			} else if ($(window).scrollTop() < 80 && headerRange == true) {
 				headerRange = !true;
 				if (minMenu) minMenu.removeClass("scrolled");
 			} //.originalEvent.wheelDelta
@@ -371,6 +380,8 @@
 			.addClass("is-selected").siblings().removeClass("is-selected");
 		})
 
+
+		//Прилоудер
 		window.preLoader = {
 		  preBox: ".pre-box",
 		  enter: false,
