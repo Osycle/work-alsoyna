@@ -559,6 +559,9 @@ figcaption{
 	}
 	.desc-content{
 		overflow: hidden;
+		@media (max-height: 650px){
+			margin-top: 30px;
+		}
 	}
 	.bnr-title{
 		position: relative;
@@ -589,6 +592,9 @@ figcaption{
 	.bnr-cnt{
 		width: 200px;
 		margin-top: 100px;
+		@media (max-height: 650px) {
+			margin-top: 20px;
+		}
 		.bnr-cnt-wrapper{
 			overflow: hidden;
 			position: relative;

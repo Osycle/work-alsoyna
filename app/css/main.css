@@ -7015,20 +7015,17 @@ tbody.collapse.in {
 			--SCROLLING--
 */
 ::-webkit-scrollbar {
-  width: 5px;
   position: absolute; }
 
 ::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
   z-index: 500;
-  background-color: #ef1937; }
+  background-color: #333333; }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #df102d; }
+  background-color: #262626; }
 
 ::-webkit-scrollbar-thumb:active {
-  background-color: #c70e28; }
+  background-color: #1a1a1a; }
 
 ::-webkit-scrollbar-track-piece {
   background-color: white; }
@@ -7040,13 +7037,13 @@ tbody.collapse.in {
 ::-o-scrollbar-thumb {
   z-index: 500;
   border-radius: 5px;
-  background-color: #f1314c; }
+  background-color: #404040; }
 
 ::-o-scrollbar-thumb:hover {
-  background-color: #df102d; }
+  background-color: #262626; }
 
 ::-o-scrollbar-thumb:active {
-  background-color: #c70e28; }
+  background-color: #1a1a1a; }
 
 ::-o-scrollbar-track-piece {
   background-color: rgba(255, 255, 255, 0.5); }
@@ -8293,6 +8290,12 @@ input[type="radio"]:checked ~ .radio-style-1, input[type="radio"]:checked ~ .rad
 .header-top {
   width: 100%;
   color: white; }
+  .header-top .lang {
+    top: 5px;
+    font-size: 0.9em;
+    z-index: 5;
+    right: 20px;
+    position: absolute; }
 
 .header-top-content {
   height: 130px;
@@ -9370,6 +9373,9 @@ figcaption {
     height: 100%; }
   .bnr-carousel .desc-content {
     overflow: hidden; }
+    @media (max-height: 650px) {
+      .bnr-carousel .desc-content {
+        margin-top: 30px; } }
   .bnr-carousel .bnr-title {
     position: relative;
     padding-left: 5px; }
@@ -9397,6 +9403,9 @@ figcaption {
   .bnr-carousel .bnr-cnt {
     width: 200px;
     margin-top: 100px; }
+    @media (max-height: 650px) {
+      .bnr-carousel .bnr-cnt {
+        margin-top: 20px; } }
     .bnr-carousel .bnr-cnt .bnr-cnt-wrapper {
       overflow: hidden;
       position: relative; }

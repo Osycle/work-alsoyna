@@ -15,7 +15,7 @@ $font-family-1: "Gotham Pro";
 $font-family-2: "Uni Sans";
 $font-family-3: sans-serif;
 
-$color-scroll: $color-1;
+$color-scroll: #333;
 $color-footer: #0071BC;
 
 $color-gray-1: #ededed; //#bdbdbd
@@ -54,11 +54,11 @@ $gradient-1: linear-gradient(to left, $color-1, $color-2);
 
 // CHROME
 ::-webkit-scrollbar{
-	width:5px;
+	//width:5px;
 	position: absolute;
 }
  ::-webkit-scrollbar-thumb{
- 	border-radius: 5px;
+ 	//border-radius: 5px;
  	z-index: 500;
 	background-color: lighten($color-scroll, 0%);
 }

@@ -64,6 +64,13 @@ $header-min-menu: 70px;
 .header-top{
 	width: 100%;
 	color: white;
+	.lang{
+		top: 5px;
+		font-size: 0.9em;
+		z-index: 5;
+		right: 20px;
+		position: absolute;
+	}
 }
 .header-top-content{
 	height: $header-top-height;
