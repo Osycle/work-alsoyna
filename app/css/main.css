@@ -9471,6 +9471,12 @@ figcaption {
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
+    @media (max-width: 991px) {
+      .header-info .flex {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; } }
   .header-info .info-address {
     background-color: #f9f9f9; }
     .header-info .info-address .icm {
@@ -9913,6 +9919,7 @@ figcaption {
   background-size: cover; }
   @media (max-width: 991px) {
     .short-certifications {
+      background-position: center;
       -webkit-background-size: cover;
       background-size: cover; }
       .short-certifications h1 {
@@ -9968,6 +9975,9 @@ figcaption {
     -webkit-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+  @media (max-width: 991px) {
+    .certifications-items figure .bg-shadow {
+      display: none; } }
 
 .certifications-items figure .img-content:hover .bg-shadow, .certifications-items figure .img-content:hover .icm {
   opacity: 1;
@@ -11036,6 +11046,12 @@ figcaption {
     padding-top: 5px;
     padding-bottom: 5px;
     height: auto; }
+  @media (max-width: 991px) {
+    .glasscontain-sort .btn-def {
+      display: inline-block;
+      height: auto;
+      padding-top: 15px;
+      padding-bottom: 15px; } }
 
 .glasscontain-sort .sort-nav {
   padding-left: 15px;

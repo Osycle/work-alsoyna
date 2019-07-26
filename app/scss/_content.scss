@@ -662,6 +662,9 @@ figcaption{
 		padding: 10px 30px;
 		align-items: center;
 		justify-content: flex-end;
+		@media (max-width: 991px) {
+			justify-content: center;
+		}
 	}
 	.info-address{
 		background-color: $color-gray-2;
@@ -1149,6 +1152,7 @@ figcaption{
 	background-repeat: no-repeat;
 	background-size: cover;
 	@media (max-width: 991px) {
+		background-position: center;
 		background-size: cover;
 		h1{
 			color: white;
@@ -1199,6 +1203,9 @@ figcaption{
 				transform: scale(2);
 				opacity: 0;
 				transition: all 0.5s ease;
+			}
+			@media (max-width: 991px) {
+				display: none;
 			}
 		}
 		.img-content:hover{
@@ -2392,6 +2399,12 @@ figcaption{
 			padding-top: 5px;
 			padding-bottom: 5px;
 			height: auto;
+		}
+		@media (max-width: 991px){
+			display: inline-block;
+			height: auto;
+			padding-top: 15px;
+			padding-bottom: 15px;
 		}
 	}
 	.sort-nav{
