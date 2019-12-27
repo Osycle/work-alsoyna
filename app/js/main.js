@@ -80,6 +80,22 @@
 			margin: 15
 		});
 
+		$(".short-video-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: true,
+			touchDrag: checkSm(),
+			responsive:{
+				0:{items:1},
+				991:{items:2}
+			},
+			navText : owlBtn,
+			margin: 15
+		});
+
+
 		if( $(".owl-nav-style-1").length > 0 ){
 			$(".owl-nav-style-1").map(function( i, el ){
 				$(el).find(".owl-prev").after($(el).find(".owl-dots"));
@@ -217,9 +233,8 @@
 			bnrCarousel.on( 'settle.flickity', function( event, index ) {
 				var that = $(this);
 				var bnrImgHeight = that.find(".is-selected img").height()
-				console.log(bnrImgHeight);
-				$(".is-selected .parallax-scene").css("transform", "scale(" + (winHeight / (bnrImgHeight * 0.012) >> 0) / 100 + ")" );
-
+				$(".is-selected .parallax-scene").css("transform", "scale(" + (winHeight / (bnrImgHeight * 0.013) >> 0) / 100 + ")" );
+				//$(".is-selected .desc-content").css("transform", "scale(" + (winHeight / (bnrImgHeight * 0.012) >> 0) / 100 + ")" );
 			});
 		}
 

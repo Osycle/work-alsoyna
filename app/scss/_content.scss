@@ -256,7 +256,7 @@ figcaption{
 		color: white;
 	}
 	.parallax-scene{
-		transform-origin: center bottom;
+		transform-origin: center top;
 	}
 	.container-arrows{
     @extend .container;
@@ -304,7 +304,7 @@ figcaption{
     }
 	}
 	.flickity-viewport{
-		height: calc(100vh + 100px) !important;
+		height: calc(100vh - 45px) !important;
 	}
 	.flickity-slider{
 		//display: none !important;
@@ -497,6 +497,10 @@ figcaption{
 			&:nth-child(2){ transition-delay: 1.4s;}
 			&:nth-child(3){ transition-delay: 1.8s;}
 		}
+		.align-i-center{
+			align-items: flex-start;
+			padding-top: 110px;
+		}
 		.desc-content{
 			p{
 				opacity: 0;
@@ -559,8 +563,11 @@ figcaption{
 	}
 	.desc-content{
 		overflow: hidden;
-		@media (max-height: 650px){
+		@media (min-height: 650px){
 			margin-top: 30px;
+		}
+		@media (max-height: 700px){
+			font-size: 0.6em;
 		}
 	}
 	.bnr-title{
@@ -605,6 +612,9 @@ figcaption{
 			line-height: 120px;
 			color: $color-1;
 		}
+		@media (max-height: 800px) {
+			display: none;
+		}
 	}
 	.img-ellipse{
 		width: 255px;
@@ -620,7 +630,10 @@ figcaption{
 	.product-img{
 		position: absolute;
 		right: 130px;
-		bottom: 15px;
+		//bottom: 15px;
+		bottom: 0;
+		height: 100%;
+		padding-top: 90px;
 	}
 	.product-details{
 		position: absolute;
@@ -651,6 +664,9 @@ figcaption{
 .header-info{
 	z-index: 1;
 	position: relative;
+	@media (min-width: 992px){
+		margin-top: -250px;
+	}
 	&, .container{
 		pointer-events: none;
 		*{
@@ -705,7 +721,7 @@ figcaption{
 		}
 	}
 	@media (min-width: 992px) {
-		margin-top: -200px;
+		margin-top: -235px;
 	}
 }
 
@@ -2568,4 +2584,33 @@ figcaption{
 .choice-color-3{
 	color: #6e3e20;
 	background-color: #6e3e20;
+}
+
+
+.short-video-items{
+	.owl-nav{
+		top: 0;
+		transform: translateY(-100%)
+	}
+	figure{
+		.img{
+			height: 350px;
+		}
+		i{
+			position: absolute;
+			@extend .trans-center;
+			color: rgba(white, 0.4);
+			font-size: 25px;
+			border-radius: 50%;
+			width: 75px;
+			height: 75px;
+			transition: all 0.2s linear;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: 5px solid rgba(white, 0.4);
+			transform-origin: 50%;
+	  	//border-style: groove;
+		}
+	}
 }
